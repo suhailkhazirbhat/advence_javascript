@@ -43,7 +43,8 @@ let obj1={
 }
 obj1.gender="male"
 let obj2={...obj1}
-console.log(obj1,obj2) // both some it should be problem
+
+console.log(obj1,obj2) // both some it should be problem+
 
 // solution by sperate operator
 let obj1o={
@@ -63,5 +64,75 @@ let num2=num1
     num1=20
 console.log(num1,num2)    
 
-// 
+// Destructure
+// array
+let  [name1="suhail",age1="23"]=["adil",'27']
+console.log(name1,age1)
+
+// obj
+let obj3={
+    name2:"suhail", 
+    age2:23
+}
+const {name2,age2}=obj3
+console.log(name2,age2)
+
+function Destructure({name2,age2}) {
+    // const {name2,age2}=parem;
+    console.log(name2,age2)
+}
+Destructure(obj3)
+
+//  try Catch Error Handling
+try {
+    let a=y-20;
+    console.log(a)
+    
+} catch (error) {
+    console.log(error)
+}
+finally{
+    console.log("finally Runing")
+
+}
+
+try {
+    let y=40
+    let a=y-20;
+    console.log(a)
+    
+} catch (error) {
+    console.log(error)
+}
+finally{
+    console.log("finally Runing")
+
+}
+
+function division() {
+    let a=10
+    let b=0
+    
+    // console.log(c)
+    try {
+        if(b===0){
+            throw new Error("Divsion by zero is not allowed");
+        }
+        let c=a/b
+        console.log(c)
+        
+        
+    } catch (error) {
+        console.log(error.message)
+    }
+    finally{
+        console.log("finally Runing")
+    
+    }
+    
+}
+division()
+
+
+
 
