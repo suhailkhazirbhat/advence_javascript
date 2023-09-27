@@ -134,5 +134,45 @@ function division() {
 division()
 
 
+//  local and session Storage JSON.stringify, JSON.parse
+//   set
+let name="suhail"
+let age=25
+localStorage.setItem("name",name)
+localStorage.setItem("age",age)
+// get
+console.log(localStorage.getItem("name"))
+
+// in premitive have no problem but non premitive some issuse
+// when set an arr it store over in one string Like ["sd", "df","dfg"]it store like "sd df dfg" it shloud problem
+// its solve by json([])
+
+// in array
+let Arrayname=["suhail","suhail","suhail"]
+localStorage.setItem("Arrayname",JSON.stringify(Arrayname)) // set in Json
+let get=localStorage.getItem("Arrayname")  
+console.log(JSON.parse(get))
+console.log(JSON.parse(get)[0])  // convert to orginal
+
+// object
+let Objname={name:"suhail",rooll:"suhail",age:"suhail"}
+localStorage.setItem("Objname",JSON.stringify(Objname)) // set in Json
+let getobj=localStorage.getItem("Objname")  
+console.log(JSON.parse(getobj))
+console.log(JSON.parse(getobj).name) 
+
+// Some   localStorage As sessionStorage
+sessionStorage.setItem("Objname",JSON.stringify(Objname)) // set in Json
+let gesessionStorageobj=sessionStorage.getItem("Objname")  
+console.log(JSON.parse(gesessionStorageobj),"gesessionStorageobj")
+console.log(JSON.parse(gesessionStorageobj).name) 
+
+// remove
+// by item name
+localStorage.removeItem("Objname")
+// clearAll
+localStorage.clear()
+
+
 
 
