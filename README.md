@@ -5,3 +5,5 @@
 <!-- call by reference -->
 <!-- Destructure -->
 <!--  try Catch Error Handling -->
+<!-- local and session Storage JSON.stringify, JSON.parse -->
+<!--  -->
