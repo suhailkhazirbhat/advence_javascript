@@ -6,4 +6,5 @@
 <!-- Destructure -->
 <!--  try Catch Error Handling -->
 <!-- local and session Storage JSON.stringify, JSON.parse -->
-<!--  -->
+<!-- HIGHER ORDER FUNCTION -->
+<!-- INBUILD FUNCTION LIKE FOREACH MAP -->

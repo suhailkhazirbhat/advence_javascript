@@ -173,6 +173,59 @@ localStorage.removeItem("Objname")
 // clearAll
 localStorage.clear()
 
+// basic concept of higher order function
+let radius=[2,4,6]
+
+// function daimeter(radius){
+// let out=[]
+//   for (let index = 0; index < radius.length; index++) {
+//     out.push(2*radius[index])
+  
+//   }
+//   return out
 
 
 
+// }
+// console.log(daimeter(radius))  
+
+// function area(radius){
+//     let out=[]
+//   for (let index = 0; index < radius.length; index++) {
+//     out.push(Math.PI*radius[index]*radius[index])
+  
+//   }
+//   return out
+
+// }
+// console.log(area(radius))  
+
+
+// example of higher order function
+let area=(r)=>Math.PI*r*r
+let daimeter=(index)=>2*index
+
+let calculate=(radius,logic)=>{
+    let out=[]
+    for (let index = 0; index < radius.length; index++) {
+        out.push(logic(radius[index]))
+        
+    }
+    return out
+
+}
+console.log(calculate(radius,area)) 
+console.log(calculate(radius,daimeter)) 
+
+// higher order those function in which one function pass as argument to another function
+
+// inbuild higherOrder function
+// FOR EACH
+radius.forEach((element) => {
+    console.log(element,"element")
+});
+// MAP
+let NewArr=radius.map((element,i)=>{
+     return(element+10)
+})
+console.log(NewArr,radius)
